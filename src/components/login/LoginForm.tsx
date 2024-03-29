@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { AtSymbolIcon, EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
 
 export default function LoginForm() {
 	return (
@@ -8,17 +8,17 @@ export default function LoginForm() {
 				<label htmlFor="email" className="font-bold">
 					Email
 				</label>
-				<div className="relative border-1 focus-within:text-gray-400">
-					<span className="absolute inset-y-0 right-0 flex items-center">
+				<div className="relative text-neutral-50 border-1 focus-within:text-gray-400">
+					<span className="absolute inset-y-0 right-2 flex items-center">
 						<button disabled className="p-1 focus:outline-none focus:shadow-outline">
-							{/* <Image src={} width={24} height={24} alt="At symbol" /> */}
+							<AtSymbolIcon className="h-5 w-5" />
 						</button>
 					</span>
 					<input
 						id="email"
 						type="email"
 						placeholder="example@mail.com"
-						className="w-full text-neutral-50 border-[1px] rounded-md px-4 py-2"
+						className="w-full border-[1px] rounded-md px-4 py-2"
 					/>
 				</div>
 			</div>
@@ -26,17 +26,17 @@ export default function LoginForm() {
 				<label htmlFor="email" className="font-bold">
 					Password
 				</label>
-				<div className="relative border-1 focus-within:text-gray-400">
-					<span className="absolute inset-y-0 right-0 flex items-center">
+				<div className="relative text-neutral-50 border-1 focus-within:text-gray-400">
+					<span className="absolute inset-y-0 right-2 flex items-center">
 						<button disabled className="p-1 focus:outline-none focus:shadow-outline">
-							{/* <Image src={} width={24} height={24} alt="At symbol" /> */}
+							<EyeIcon className="h-5 w-5" />
 						</button>
 					</span>
 					<input
 						id="email"
 						type="email"
 						placeholder="6+ strong characters"
-						className="w-full text-neutral-50 border-[1px] rounded-md px-4 py-2"
+						className="w-full border-[1px] rounded-md px-4 py-2"
 					/>
 				</div>
 			</div>
