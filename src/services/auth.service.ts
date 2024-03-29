@@ -2,7 +2,7 @@ import {
 	getAuth,
 	createUserWithEmailAndPassword,
 	signInWithEmailAndPassword as firebaseSignIn,
-	signOut,
+	signOut as firebaseSignOut,
 } from "firebase/auth";
 import app from "../configs/firebase.config";
 
@@ -17,7 +17,7 @@ export const signUpWithEmailAndPassword = async (email: string, password: string
 	}
 };
 
-export const singInWithEmailAndPassword = async (email: string, password: string) => {
+export const signInWithEmailAndPassword = async (email: string, password: string) => {
 	try {
 		const userCredential = await firebaseSignIn(auth, email, password);
 		return userCredential.user;
@@ -26,9 +26,9 @@ export const singInWithEmailAndPassword = async (email: string, password: string
 	}
 };
 
-export const signOutUser = async () => {
+export const signOut = async () => {
 	try {
-		await signOut(auth);
+		await firebaseSignOut(auth);
 	} catch (error) {
 		throw error;
 	}
