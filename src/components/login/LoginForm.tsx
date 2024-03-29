@@ -18,7 +18,7 @@ export default function LoginForm() {
 						id="email"
 						type="email"
 						placeholder="example@mail.com"
-						className="w-full border-[1px] rounded-md px-4 py-2"
+						className="w-full border border-neutral-100 rounded-md px-4 py-2 placeholder:text-neutral-50"
 					/>
 				</div>
 			</div>
@@ -36,7 +36,7 @@ export default function LoginForm() {
 						id="email"
 						type="email"
 						placeholder="6+ strong characters"
-						className="w-full border-[1px] rounded-md px-4 py-2"
+						className="w-full border border-neutral-100 rounded-md px-4 py-2 placeholder:text-neutral-50"
 					/>
 				</div>
 			</div>
