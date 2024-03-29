@@ -23,7 +23,7 @@ export default function LoginForm() {
 				</div>
 			</div>
 			<div className="w-full mb-4">
-				<label htmlFor="email" className="font-bold">
+				<label htmlFor="password" className="font-bold">
 					Password
 				</label>
 				<div className="relative text-neutral-50 border-1 focus-within:text-gray-400">
@@ -33,8 +33,8 @@ export default function LoginForm() {
 						</button>
 					</span>
 					<input
-						id="email"
-						type="email"
+						id="password"
+						type="password"
 						placeholder="6+ strong characters"
 						className="w-full border border-neutral-100 rounded-md px-4 py-2 placeholder:text-neutral-50"
 					/>
