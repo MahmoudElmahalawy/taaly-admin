@@ -1,9 +1,11 @@
-import Summary from "@/components/dashboard/monitoring/Summary";
+import SummaryCardList from "@/components/dashboard/monitoring/SummaryCardList";
+import Table from "@/components/dashboard/monitoring/Table";
 
 export default function MonitoringPage() {
 	return (
-		<div>
-			<Summary />
+		<div className="grid grid-cols-12 gap-6 px-12 py-8">
+			<SummaryCardList />
+			<Table />
 		</div>
 	);
 }
