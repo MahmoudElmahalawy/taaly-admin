@@ -5,6 +5,7 @@ import Header from "../../components/layouts/dashboard/Header";
 import Sidebar from "../../components/layouts/dashboard/Sidebar";
 import OverallActivity from "@/components/dashboard/monitoring/OverallActivity";
 import Attendance from "@/components/dashboard/monitoring/Attendance";
+import ManageOrganizations from "@/components/dashboard/monitoring/ManageOrganizations";
 
 export default function DashboardLayout({
 	children,
@@ -22,6 +23,7 @@ export default function DashboardLayout({
 				<div className="col-span-2 flex flex-col gap-4">
 					<OverallActivity />
 					<Attendance />
+					<ManageOrganizations />
 				</div>
 			</div>
 		</div>
