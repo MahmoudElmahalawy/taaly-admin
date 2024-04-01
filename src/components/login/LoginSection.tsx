@@ -23,7 +23,7 @@ export default function LoginSection() {
 					</h1>
 					<h2 className="text-xl text-center lg:text-start lg:text-3xl font-medium mb-2">Login here</h2>
 					<p className="text-neutral-200 text-sm text-center">
-						Don't have an account?{" "}
+						Don&apos;t have an account?{" "}
 						<span className="text-primary-500 underline">
 							<Link href={"/auth/signup"}>Sign up</Link>
 						</span>
