@@ -4,6 +4,7 @@ import React from "react";
 import Header from "../../components/layouts/dashboard/Header";
 import Sidebar from "../../components/layouts/dashboard/Sidebar";
 import OverallActivity from "@/components/dashboard/monitoring/OverallActivity";
+import Attendance from "@/components/dashboard/monitoring/Attendance";
 
 export default function DashboardLayout({
 	children,
@@ -18,8 +19,9 @@ export default function DashboardLayout({
 			<div className="h-[calc(100vh-200px)] grid grid-cols-10 gap-4">
 				<Sidebar />
 				<div className="bg-primary-50 col-span-6 rounded-2xl">{children}</div>
-				<div className="col-span-2">
+				<div className="col-span-2 flex flex-col gap-4">
 					<OverallActivity />
+					<Attendance />
 				</div>
 			</div>
 		</div>
