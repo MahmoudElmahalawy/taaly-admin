@@ -21,11 +21,11 @@ export default function Attendance() {
 				</CircularProgress>
 			</div>
 			<div className="flex">
-				<div className="w-1/2 h-full flex flex-col gap-3 text-start">
+				<div className="w-1/2 h-full flex flex-col justify-between gap-3 text-start">
 					<h3 className="text-neutral-200 text-xl">Learners</h3>
 					<div className="text-primary-500 text-4xl font-bold">91%</div>
 				</div>
-				<div className="w-1/2 h-full flex flex-col gap-3 text-start">
+				<div className="w-1/2 h-full flex flex-col justify-between gap-3 text-start">
 					<h3 className="text-neutral-200 text-xl">Language Buddies</h3>
 					<div className="text-secondary-500 text-4xl font-bold">95%</div>
 				</div>
