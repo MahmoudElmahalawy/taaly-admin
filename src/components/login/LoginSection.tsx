@@ -2,10 +2,11 @@ import React from "react";
 import Image from "next/image";
 import LoginForm from "./LoginForm";
 import TaalyLogo from "../../../public/static/images/logos/taaly.svg";
+import Link from "next/link";
 
 export default function LoginSection() {
 	return (
-		<section className="max-w-[80rem] h-4/6 lg:flex bg-white lg:bg-[url('/static/images/backgrounds/wave.svg')] lg:bg-no-repeat lg:bg-right-bottom lg:rounded-r-2xl">
+		<section className="max-w-[80rem] h-5/6 lg:flex bg-white lg:bg-[url('/static/images/backgrounds/wave.svg')] lg:bg-no-repeat lg:bg-right-bottom lg:rounded-r-2xl">
 			<div className="lg:w-1/2 bg-primary-500 grid place-items-center lg:rounded-2xl pb-6 lg:pb-[unset]">
 				<div className="w-9/12 sm:w-1/3 lg:w-9/12 text-base md:text-xl lg:text-4xl text-white text-center mx-auto">
 					<Image src={TaalyLogo} alt="Taaly logo" className="w-4/5 mx-auto -my-6 lg:-my-16" />
@@ -20,7 +21,13 @@ export default function LoginSection() {
 							<strong>Taaly!</strong>
 						</span>
 					</h1>
-					<h2 className="text-xl text-center lg:text-start lg:text-3xl font-medium mb-4">Login here</h2>
+					<h2 className="text-xl text-center lg:text-start lg:text-3xl font-medium mb-2">Login here</h2>
+					<p className="text-neutral-200 text-sm text-center">
+						Don't have an account?{" "}
+						<span className="text-primary-500 underline">
+							<Link href={"/auth/signup"}>Sign up</Link>
+						</span>
+					</p>
 					<LoginForm />
 				</div>
 			</div>
