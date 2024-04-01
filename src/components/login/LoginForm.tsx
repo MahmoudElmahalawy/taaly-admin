@@ -1,7 +1,28 @@
+import React from "react";
 import Link from "next/link";
 import { AtSymbolIcon, EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
+import { useForm } from "react-hook-form";
+
+interface LoginFormInputs {
+	email: string;
+	password: string;
+}
 
 export default function LoginForm() {
+	const [showPassword, setShowPassword] = React.useState<boolean>(false);
+
+	const {
+		register,
+		setValue,
+		handleSubmit,
+		formState: { errors },
+		control,
+	} = useForm<LoginFormInputs>();
+
+	const togglePasswordVisibility = () => {
+		setShowPassword(!showPassword);
+	};
+
 	return (
 		<form className="w-full flex flex-col items-center">
 			<div className="w-full mb-5">

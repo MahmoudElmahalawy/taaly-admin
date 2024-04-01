@@ -1,11 +1,10 @@
 "use client";
 
-import OrganizationCard from "./OrganizationCard";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { ChevronLeftIcon } from "@heroicons/react/24/outline";
+import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import OrganizationCard from "./OrganizationCard";
 
 export default function OrganizationCardList() {
 	const navBtnStyle = {
