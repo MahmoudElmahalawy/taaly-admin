@@ -1,10 +1,23 @@
+import { signOut } from "@/services/auth.service";
 import { BellIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 import TaalyWithTextLogo from "../../../../public/static/images/logos/taaly-with-text.svg";
 import ProfilePicture from "../../../../public/static/images/profile-pictures/jenny.png";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
+	const router = useRouter();
+
+	const handleSignOut = async () => {
+		try {
+			await signOut();
+		} finally {
+			localStorage.clear();
+			router.push("/");
+		}
+	};
+
 	return (
 		<header className="col-span-12 flex items-center justify-between bg-primary-50 rounded-2xl px-6 py-4">
 			<div>
@@ -38,7 +51,9 @@ export default function Header() {
 				<div tabIndex={0} className="relative cursor-pointer [&>.dropdown]:focus-within:block">
 					<Image src={ProfilePicture} alt="profile picture" width={87} height={87} className="rounded-full" />
 					<div className="dropdown hidden absolute -left-2 text-xl py-2 bg-white border border-neutral-100 mt-2 rounded-lg">
-						<button className="w-full p-5 hover:bg-primary-50">Logout</button>
+						<button onClick={handleSignOut} className="w-full p-5 hover:bg-primary-50">
+							Logout
+						</button>
 					</div>
 				</div>
 			</div>
